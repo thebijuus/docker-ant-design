@@ -8,7 +8,7 @@ RUN wget https://github.com/ant-design/ant-design/archive/master.zip
 
 RUN unzip master.zip
 
-RUN mv master/* .
+RUN mv ant-design-master/* . ; rm -f ant-design-master
 
 RUN yarn
 
