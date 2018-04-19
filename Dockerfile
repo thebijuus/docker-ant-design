@@ -8,7 +8,7 @@ WORKDIR /antdesign
 
 RUN wget https://github.com/ant-design/ant-design/archive/3.4.1.zip
 
-RUN unzip ant-design-3.4.1.zip
+RUN unzip 3.4.1.zip
 
 WORKDIR /antdesign/ant-design-3.4.1
 
