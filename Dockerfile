@@ -1,4 +1,4 @@
-FROM kkarczmarczyk/docker-node-yarn:8.0-wheezy
+FROM kkarczmarczyk/node-yarn:8.0-wheezy
 
 WORKDIR /antdesign
 
