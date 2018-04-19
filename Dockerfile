@@ -4,7 +4,7 @@ WORKDIR /antdesign
 
 RUN wget https://github.com/ant-design/ant-design/archive/master.zip
 
-RUN tar -xzf master.zip --strip 1
+RUN unzip -j master.zip
 
 RUN yarn
 
