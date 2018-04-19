@@ -6,11 +6,11 @@ ADD Dockerfile /Dockerfile
 
 WORKDIR /antdesign
 
-RUN wget https://github.com/ant-design/ant-design/archive/master.zip
+RUN wget https://github.com/ant-design/ant-design/archive/3.4.1.zip
 
-RUN unzip master.zip
+RUN unzip ant-design-3.4.1.zip
 
-WORKDIR /antdesign/ant-design-master
+WORKDIR /antdesign/ant-design-3.4.1
 
 RUN yarn
 
