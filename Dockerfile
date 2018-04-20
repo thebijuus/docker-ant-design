@@ -1,5 +1,7 @@
 FROM kkarczmarczyk/node-yarn:8.0-wheezy
 
+EXPOSE 8001
+
 RUN apt-get update ; apt-get install -y unzip
 
 ADD Dockerfile /Dockerfile
@@ -14,4 +16,4 @@ WORKDIR /antdesign/ant-design-3.4.1
 
 RUN yarn
 
-CMD "yarn start"
+CMD ["yarn","start"]
