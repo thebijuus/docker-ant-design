@@ -1,4 +1,4 @@
-FROM kkarczmarczyk/node-yarn:8.0-wheezy
+FROM kkarczmarczyk/node-yarn:8.0-wheezy AS build
 EXPOSE 8001
 RUN apt-get -qq update ; apt-get -qq install -y unzip
 WORKDIR /antdesign
@@ -7,8 +7,9 @@ RUN unzip -q 3.4.1.zip
 WORKDIR /antdesign/ant-design-3.4.1
 RUN yarn install --quiet
 RUN yarn run --quiet deploy
+RUN ls -lh
 
 FROM nginx:1.13.12
 EXPOSE 80
-COPY --from=0 /antdesign/ant-design-3.4.1/_site /usr/share/nginx/html/
+COPY --from=build /antdesign/ant-design-3.4.1/_site/ /usr/share/nginx/html/
 ADD Dockerfile /Dockerfile
