@@ -7,9 +7,9 @@ RUN unzip -q 3.4.1.zip
 WORKDIR /antdesign/ant-design-3.4.1
 RUN yarn install --quiet
 RUN yarn run deploy --quiet
-RUN ls -lh
+#RUN ls -lh
 
-FROM nginx:1.13.12
-EXPOSE 80
-COPY --from=build /antdesign/ant-design-3.4.1/_site/ /usr/share/nginx/html/
-ADD Dockerfile /Dockerfile
+#FROM nginx:1.13.12
+#EXPOSE 80
+#COPY --from=build /antdesign/ant-design-3.4.1/_site/ /usr/share/nginx/html/
+#ADD Dockerfile /Dockerfile
