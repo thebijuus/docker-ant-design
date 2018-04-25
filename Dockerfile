@@ -6,7 +6,7 @@ RUN wget --quiet https://github.com/ant-design/ant-design/archive/3.4.1.zip
 RUN unzip -q 3.4.1.zip
 WORKDIR /antdesign/ant-design-3.4.1
 RUN yarn install --quiet
-RUN yarn run --quiet deploy
+RUN yarn run deploy --quiet
 RUN ls -lh
 
 FROM nginx:1.13.12
