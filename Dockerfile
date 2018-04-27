@@ -6,6 +6,7 @@ RUN unzip -q 3.4.1.zip
 WORKDIR /antdesign/ant-design-3.4.1
 RUN yarn install
 RUN yarn run deploy
+RUN ls -lh _site/
 
 #FROM trinitronx/python-simplehttpserver:travis-12
 #EXPOSE 8080
