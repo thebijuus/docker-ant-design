@@ -1,13 +1,11 @@
 FROM kkarczmarczyk/node-yarn:8.0-wheezy AS build
-EXPOSE 8001
 RUN apt-get -qq update ; apt-get -qq install -y unzip
 WORKDIR /antdesign
 RUN wget --quiet https://github.com/ant-design/ant-design/archive/3.4.1.zip
 RUN unzip -q 3.4.1.zip
 WORKDIR /antdesign/ant-design-3.4.1
-RUN yarn install
-RUN yarn run deploy
-RUN yarn run site
+RUN npm install
+RUN npm update && npm run deploy
 
 FROM trinitronx/python-simplehttpserver:travis-12
 EXPOSE 8080
