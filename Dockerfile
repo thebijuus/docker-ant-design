@@ -4,8 +4,8 @@ WORKDIR /antdesign
 RUN wget --quiet https://github.com/ant-design/ant-design/archive/3.4.1.zip
 RUN unzip -q 3.4.1.zip
 WORKDIR /antdesign/ant-design-3.4.1
-RUN npm install
-RUN npm update && npm run deploy
+RUN yarn install
+RUN yarn deploy
 RUN ls -lh _site/
 
 #FROM trinitronx/python-simplehttpserver:travis-12
