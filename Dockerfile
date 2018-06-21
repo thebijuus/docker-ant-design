@@ -1,4 +1,4 @@
-ARG ANTDESIGN_VERSION=3.5.1
+ARG ANTDESIGN_VERSION=3.6.3
 
 FROM kkarczmarczyk/node-yarn:8.0-wheezy AS build
 
